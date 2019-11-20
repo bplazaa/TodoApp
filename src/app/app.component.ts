@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { AppState } from './app.reducers';
+import { Todo } from './todo/Models/todo.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TodoApp';
+  todos: Todo[] = [] ;
+  constructor(private store: Store<AppState>){
+    
+  }
 }
